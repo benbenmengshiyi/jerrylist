@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "jerrylist.jerrylist",
+        "description": "Jerry list in Wiesloch",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/webapp",
+        "appUrl": "#jerrylist-Display",
+        "navigationComponentName": "jerrylist",
+        "intentSemanticObject": "jerrylist",
+        "intentAction": "Display",
+        "html5ApplicationName": "jerrylist",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "00000000-0000-1111-0000-00000000"
+        ],
+        "contentPackages": [
+            "00000000-0000-2222-0000-00000000"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Jerry list in Wiesloch",
+        "subtitle": "HCP self study",
+        "searchKeywords": "Jerry list in Wiesloch,HCP self study",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}
