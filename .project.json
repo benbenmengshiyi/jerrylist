@@ -33,5 +33,10 @@
     "notifyBeforePushLevel": "Error",
     "blockPush": false,
     "blockPushLevel": "Error"
+  },
+  "hcpdeploy": {
+    "account": "i042416trial",
+    "name": "jerrylist",
+    "lastVersionWeTriedToDeploy": "3"
   }
 }
