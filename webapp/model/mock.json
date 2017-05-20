@@ -1324,7 +1324,6 @@
 					"CurrencyCode": "EUR",
 					"ProductId": "HT-1000",
 					"ProductName": "Notebook Basic 15",
-					"Quantity": "2.000",
 					"QuantityUnit": "EA",
 					"DeliveryDate": "2013-05-29T22:00:00"
 				},
@@ -1337,7 +1336,6 @@
 					"CurrencyCode": "EUR",
 					"ProductId": "HT-1091",
 					"ProductName": "Blaster Extreme",
-					"Quantity": "2.000",
 					"QuantityUnit": "EA",
 					"DeliveryDate": "2013-05-29T22:00:00"
 				}
@@ -1390,7 +1388,6 @@
 					"CurrencyCode": "USD",
 					"ProductId": "HT-2026",
 					"ProductName": "Audio/Video Cable Kit - 12 ft",
-					"Quantity": "2.000",
 					"QuantityUnit": "EA",
 					"DeliveryDate": "2013-05-29T22:00:00"
 				},
@@ -1403,7 +1400,6 @@
 					"CurrencyCode": "USD",
 					"ProductId": "HT-1002",
 					"ProductName": "Notebook Basic 18",
-					"Quantity": "2.000",
 					"QuantityUnit": "EA",
 					"DeliveryDate": "2013-05-29T22:00:00"
 				},
@@ -1416,7 +1412,6 @@
 					"CurrencyCode": "USD",
 					"ProductId": "HT-1100",
 					"ProductName": "Smart Office",
-					"Quantity": "3.000",
 					"QuantityUnit": "EA",
 					"DeliveryDate": "2013-05-29T22:00:00"
 				},
@@ -1429,7 +1424,6 @@
 					"CurrencyCode": "USD",
 					"ProductId": "HT-2026",
 					"ProductName": "Audio/Video Cable Kit - 12 ft",
-					"Quantity": "2.000",
 					"QuantityUnit": "EA",
 					"DeliveryDate": "2013-05-29T22:00:00"
 				},
@@ -1442,7 +1436,6 @@
 					"CurrencyCode": "USD",
 					"ProductId": "HT-1002",
 					"ProductName": "Notebook Basic 18",
-					"Quantity": "2.000",
 					"QuantityUnit": "EA",
 					"DeliveryDate": "2013-05-29T22:00:00"
 				},
@@ -1455,7 +1448,6 @@
 					"CurrencyCode": "USD",
 					"ProductId": "HT-1100",
 					"ProductName": "Smart Office",
-					"Quantity": "1.000",
 					"QuantityUnit": "EA",
 					"DeliveryDate": "2013-05-29T22:00:00"
 				},
@@ -1468,7 +1460,6 @@
 					"CurrencyCode": "USD",
 					"ProductId": "HT-2026",
 					"ProductName": "Audio/Video Cable Kit - 12 ft",
-					"Quantity": "3.000",
 					"QuantityUnit": "EA",
 					"DeliveryDate": "2013-05-29T22:00:00"
 				}
@@ -1536,7 +1527,6 @@
 					"CurrencyCode": "USD",
 					"ProductId": "HT-1007",
 					"ProductName": "1UMTS PDA",
-					"Quantity": "1.000",
 					"QuantityUnit": "EA",
 					"DeliveryDate": "2013-05-29T22:00:00"
 				},
@@ -1549,7 +1539,6 @@
 					"CurrencyCode": "USD",
 					"ProductId": "HT-1102",
 					"ProductName": "Smart Network",
-					"Quantity": "3.000",
 					"QuantityUnit": "EA",
 					"DeliveryDate": "2013-05-29T22:00:00"
 				},
@@ -1562,7 +1551,6 @@
 					"CurrencyCode": "USD",
 					"ProductId": "HT-2001",
 					"ProductName": "10\" Portable DVD player",
-					"Quantity": "3.000",
 					"QuantityUnit": "EA",
 					"DeliveryDate": "2013-05-29T22:00:00"
 				},
@@ -1575,7 +1563,6 @@
 					"CurrencyCode": "USD",
 					"ProductId": "HT-1007",
 					"ProductName": "1UMTS PDA",
-					"Quantity": "1.000",
 					"QuantityUnit": "EA",
 					"DeliveryDate": "2013-05-29T22:00:00"
 				}
