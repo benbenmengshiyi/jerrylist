@@ -1,3 +1,5 @@
+// Jerry 2017-05-20 11:55AM - below comment works!
+// /*eslint linebreak-style: ["error", "windows"]*/
 jQuery.sap.declare("jerrylist.util.Grouper");
 
 jerrylist.util.Grouper = {
