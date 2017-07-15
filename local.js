@@ -25,7 +25,7 @@ app.post("/", function(req, res){
 
     req.on('end', function () {
             var post = qs.parse(body);
-            res.send("Hello World result");
+            res.send("your request is: " + post.markdown_source);
     });
 });
 app.listen(process.env.PORT || 3000, function(){
