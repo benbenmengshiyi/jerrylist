@@ -8,7 +8,10 @@ app.get('/', function(req, res){
 
 app.post("/", function(req, res){
 	console.log("method: " + req.method);
-   res.send("Hello World post");
+    res.send("Hello World post");
+    req.on('data', function(data) {
+        console.log("request data: " + data);
+    });
 });
 app.listen(process.env.PORT || 3000, function(){
      console.log("Example app listens on port 3000.");
