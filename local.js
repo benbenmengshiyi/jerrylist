@@ -9,16 +9,16 @@ app.get('/', function(req, res){
 
 app.post("/", function(req, res){
 	var body = '';
-	/*console.log("method: " + req.method);
-    res.send("Hello World post");
-    req.on('data', function(data) {
-        console.log("request data: " + data);
-    });*/
+	const regex = /!\[(.*?)\]\((.*?)\)/g;
+	var m;
+	var printResult = ( array) => {
+    	var url = array[2];
+    	var splited = url.split(".");
+		console.log("local file: " + array[1] + "." + splited[splited.length-1]);
+		console.log("url: " + url);
+	};
 	req.on('data', function (data) {
             body += data;
-
-            // Too much POST data, kill the connection!
-            // 1e6 === 1 * Math.pow(10, 6) === 1 * 1000000 ~~~ 1MB
             if (body.length > 1e6)
                 request.connection.destroy();
         });
@@ -26,6 +26,13 @@ app.post("/", function(req, res){
     req.on('end', function () {
             var post = qs.parse(body);
             res.send("your request is: " + post.markdown_source);
+            while ((m = regex.exec(post.markdown_source)) !== null) {
+    			if (m.index === regex.lastIndex) {
+        		regex.lastIndex++;
+    		}
+    		printResult(m);
+    	}
+    	
     });
 });
 app.listen(process.env.PORT || 3000, function(){
