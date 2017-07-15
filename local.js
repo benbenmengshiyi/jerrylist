@@ -34,15 +34,14 @@ app.post("/", function(req, res){
             // res.send("your request is: " + post.markdown_source);
             while ((m = regex.exec(post.markdown_source)) !== null) {
     			if (m.index === regex.lastIndex) {
-        		regex.lastIndex++;
+        			regex.lastIndex++;
+    			}
+    			aResult = aResult.concat(printResult(m));
     		}
-    		aResult = aResult.concat(printResult(m));
     		console.log(aResult);
     		res.json(aResult);
-    	}
-    	
-    });
-});
+    	});
+	});
 app.listen(process.env.PORT || 3000, function(){
      console.log("Example app listens on port 3000.");
 });
