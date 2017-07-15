@@ -11,11 +11,16 @@ app.post("/", function(req, res){
 	var body = '';
 	const regex = /!\[(.*?)\]\((.*?)\)/g;
 	var m;
-	var printResult = ( array) => {
+	var printResult = ( array ) => {
+		var aResult = [];
     	var url = array[2];
     	var splited = url.split(".");
-		console.log("local file: " + array[1] + "." + splited[splited.length-1]);
-		console.log("url: " + url);
+    	var oResult = {
+    		"localFile": array[1] + "." + splited[splited.length-1],
+    		"fileUrl": url
+    	};
+		aResult.push(oResult);
+		return aResult;
 	};
 	req.on('data', function (data) {
             body += data;
@@ -25,12 +30,18 @@ app.post("/", function(req, res){
 
     req.on('end', function () {
             var post = qs.parse(body);
-            res.send("your request is: " + post.markdown_source);
+            var aResult = [];
+            // res.send("your request is: " + post.markdown_source);
             while ((m = regex.exec(post.markdown_source)) !== null) {
     			if (m.index === regex.lastIndex) {
         		regex.lastIndex++;
     		}
-    		printResult(m);
+    		aResult = aResult.concat(printResult(m));
+    		console.log(aResult);
+    		res.json(JSON.stringify(aResult));
+
+    		var aa = JSON.parse(JSON.stringify(aResult));
+    		console.log("after convert: " + aa.length);
     	}
     	
     });
