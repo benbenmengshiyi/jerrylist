@@ -38,10 +38,7 @@ app.post("/", function(req, res){
     		}
     		aResult = aResult.concat(printResult(m));
     		console.log(aResult);
-    		res.json(JSON.stringify(aResult));
-
-    		var aa = JSON.parse(JSON.stringify(aResult));
-    		console.log("after convert: " + aa.length);
+    		res.json(aResult);
     	}
     	
     });
