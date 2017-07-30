@@ -5,8 +5,126 @@
   "main": "local.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node local.js",
+    "serve:dev": "brain start"
   },
+  "config": {
+    "lint": {
+      "rules": [
+        {
+          "path": "eslint_rules"
+        }
+      ],
+      "formatter": "stylish"
+    },
+    "brain": {
+      "branding": "AURORA",
+      "scheme": "http",
+      "host": "0.0.0.0",
+      "port": 8080,
+      "<cerebro": {
+        "database": {
+          "name": "cerebro.db",
+          "secret": ""
+        },
+        "paths": {
+          "sap/client/offline": "src/_offline/src/main/uilib/sap/client/offline",
+          "sap/n/base": "src/_nbase/src/main/uilib/sap/n/base",
+          "sap/n": "src/_ncore/src/main/uilib/sap/n"
+        }
+      },
+      "compression": true,
+      "cors": {
+        "origin": "*"
+      },
+      "forwards": [
+        {
+          "source": "^\\/application(\\/.*)$",
+          "target": "$1",
+          "description": "legacy forward for old Tomcat use-cases based on application path"
+        },
+        {
+          "source": "^(\\/resources\\/)sap-ui-cachebuster\\/(.*)$",
+          "target": "$1$2",
+          "description": "sap-ui-cachebuster bootstrapping not yet supported"
+        },
+        {
+          "source": "^(.*)TestSuiteForJSFiles(.*)$",
+          "target": "$1TestSuite$2",
+          "description": "fallback to old test suites having extension ForJSFiles. Relict from old html unit tests fieles. This forward rule should be removed in 1802"
+        }
+      ],
+      "fallbacks": [
+        {
+          "source": "^(.*\\/themes\\/)([^\\/]*)(\\/.*)$",
+          "target": "$1base$3",
+          "description": "fallback to base theme"
+        },
+        {
+          "source": "^(.*\\/)([^_]*)(_[^_]*)_HK\\.properties$",
+          "target": "$1$2$3_TW.properties",
+          "description": "special fallback for chinese language"
+        },
+        {
+          "source": "^(.*\\/)([^_]*)(_[^_]*)(_((?!HK).)*)\\.properties$",
+          "target": "$1$2$3.properties",
+          "description": "fallback to no-country"
+        },
+        {
+          "source": "^(.*\\/)([^_]*)(_((?!en).)*)\\.properties$",
+          "target": "$1$2_en.properties",
+          "description": "fallback to english language properties"
+        },
+        {
+          "source": "^(.*\\/)([^_]*)(_en)\\.properties$",
+          "target": "$1$2.properties",
+          "description": "fallback to base properties"
+        }
+      ],
+      "proxies": [
+        {
+          "path": "^\\/proxy\\/(http|https)\\/(.*)$",
+          "description": "proxy for requests to backend system",
+          "target": "$0://$1"
+        }
+      ],
+      "environments": {
+        "development": {
+          "forwards": [
+            {
+              "source": "^/$",
+              "target": "/debugapp.html",
+              "description": "home page"
+            },
+            {
+              "source": "^(\\/resources\\/sap\\/client\\/.*)-dbg(.*)\\.js$",
+              "target": "$1$2.js",
+              "description": "debug forward for client"
+            },
+            {
+              "source": "^(\\/resources\\/sap\\/n\\/.*)-dbg(.*)\\.js$",
+              "target": "$1$2.js",
+              "description": "debug forward for n"
+            },
+            {
+              "source": "^(\\/resources\\/JAM|JSST|mashup\\/.*)-dbg(.*)\\.js$",
+              "target": "$1$2.js",
+              "description": "debug forward for additional project resources"
+            }
+          ]
+        },
+        "production": {
+          "forwards": [
+            {
+              "source": "^/$",
+              "target": "/newofflineapp.html",
+              "description": "home page"
+            }
+          ]
+        }
+      }
+  }
+    },
   "author": "Jerry",
   "license": "ISC"
 }
