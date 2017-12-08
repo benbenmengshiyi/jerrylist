@@ -7,7 +7,7 @@
   },
   "main": "local.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node local.js",
     "test": "node test.js"
   },
   "dependencies": {
