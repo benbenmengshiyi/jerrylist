@@ -3,7 +3,7 @@ var qs = require('querystring');
 var app = express();
 app.use('/ui5', express.static(path.join(__dirname, 'webapp')));
 app.get('/', function(req, res){
-	console.log("method: " + req.method);
+	console.log("method in get/: " + req.method);
    res.send("Hello World");
 });
 
