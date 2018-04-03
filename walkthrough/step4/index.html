@@ -18,6 +18,9 @@
 		}'>
 	</script>
 	<script>
+	/*
+	We replace the instantiation of the sap.m.Text control by our new App XML view. The view is created by a factory function of SAPUI5 which makes sure that the view is correctly configured and can be extended by customers. The name is prefixed with the namespace sap.ui.demo.walkthrough.view in order to uniquely identify this resource.
+	*/
 		sap.ui.getCore().attachInit(function () {
 			sap.ui.xmlview({
 				viewName: "sap.ui.demo.walkthrough.view.App"
