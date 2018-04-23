@@ -3,8 +3,10 @@ var qs = require('querystring');
 var app = express();
 app.use('/ui5', express.static(path.join(__dirname, 'webapp')));
 app.use('/wt', express.static(path.join(__dirname, 'walkthrough')));
+app.use('/mindmap', express.static(path.join(__dirname, 'mindmap')));
 app.get('/', function(req, res){
 	console.log("method in get/: " + req.method);
+    var qs = require('querystring');
    res.send("Hello World");
 });
 
