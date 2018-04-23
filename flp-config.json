@@ -2,7 +2,7 @@
     "application": {
         "id": "",
         "title": "jerrylist.jerrylist",
-        "description": "Jerry list in Wiesloch",
+        "description": "Jerry Application in Fiori launchpad",
         "type": "SAP_UI5_Component",
         "componentUrl": "/webapp",
         "appUrl": "#jerrylist-Display",
@@ -14,18 +14,18 @@
     },
     "assignment": {
         "groups": [
-            "00000000-0000-1111-0000-00000000"
+            "4dddd0e7-a0e0-439c-858a-f2c617e4a0ed"
         ],
         "contentPackages": [
-            "00000000-0000-2222-0000-00000000"
+            "fb1b4d71-542c-46a9-ba69-b421397b2b00"
         ],
         "categories": []
     },
     "tile": {
         "type": "StaticTile",
-        "title": "Jerry list in Wiesloch",
-        "subtitle": "HCP self study",
-        "searchKeywords": "Jerry list in Wiesloch,HCP self study",
+        "title": "Jerry's tile",
+        "subtitle": "for demo purpose",
+        "searchKeywords": "Jerry's tile,for demo purpose",
         "displayIconUrl": "sap-icon://approvals",
         "displayInfoText": "",
         "size": "1x1",
