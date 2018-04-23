@@ -1,7 +1,7 @@
 ---
 applications:
 - name: jerrylist
-  memory: 512MB
+  memory: 56MB
   instances: 1
   timeout: 180
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git#v1.5.18
